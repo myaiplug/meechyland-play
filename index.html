@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MeechyLand</title>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0a0e17 0%, #1a1f2e 100%);
+    color: #e8f0ff;
+    font-family: system-ui, -apple-system, sans-serif;
+    text-align: center;
+  }
+  h1 {
+    font-size: 3.5rem;
+    margin: 0 0 0.5rem;
+    background: linear-gradient(90deg, #00f0ff, #ff00aa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.1em;
+  }
+  p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 2rem; }
+  .play-btn {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #00f0ff, #ff00aa);
+    color: #000;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 0 30px rgba(0,240,255,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .play-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0,240,255,0.6);
+  }
+  .note { margin-top: 2rem; font-size: 0.9rem; opacity: 0.6; max-width: 400px; }
+</style>
+</head>
+<body>
+  <h1>MeechyLand</h1>
+  <p>Click the button to play</p>
+  <a class="play-btn" href="https://eaglercraft.com/" target="_blank">Play MeechyLand</a>
+  <div class="note">
+    Once the server is online, this button will open the game ready to connect.<br>
+    Server address will be pre-filled after tunnel setup.
+  </div>
+</body>
+</html>
