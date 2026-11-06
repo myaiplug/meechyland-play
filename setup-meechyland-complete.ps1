@@ -43,8 +43,8 @@ $commands = @"
 # Manually add these JARs first (1.12 builds):
 # - GriefPrevention
 # - WorldEdit
-# - MythicMobs (optional AI)
-# - Citizens (optional NPCs)
+# - MythicMobs (AI mobs)
+# - Citizens (NPCs)
 
 op YourMinecraftName
 
@@ -74,15 +74,31 @@ op YourMinecraftName
 /kit builder Mila
 /kit builder BigMeech67
 
-# Games (examples - paste arenas with WorldEdit)
+# === GAMES ===
+# Parkour (paste an arena first with WorldEdit)
 # //schem load parkour-arena
 # //paste
-# //schem load spleef
-# //paste
+# Set spawn: /setwarp parkour
+# Reset player: /tp @p parkour
 
-# AI (after adding MythicMobs or Citizens)
-# /mm mobs spawn CustomMob
+# Spleef
+# //schem load spleef-arena
+# //paste
+# /setwarp spleef
+# Start: clear snow layers or use command blocks
+
+# === AI MOBS (MythicMobs) ===
+# After installing MythicMobs, create a mob in plugins/MythicMobs/Mobs/
+# Spawn example:
+# /mm mobs spawn FriendlyGuardian 1
+# /mm mobs spawn MeechyBoss 1
+# Give spawn egg: /mm eggs get FriendlyGuardian
+
+# === NPCs (Citizens) ===
 # /npc create MilaGuide
+# /npc select 1
+# /npc text add Welcome to MeechyLand!
+# /npc lookclose
 "@
 
 Set-Content -Path "$root\full-setup-commands.txt" -Value $commands -Encoding UTF8
