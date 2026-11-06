@@ -19,6 +19,8 @@
   .copy-btn { background: transparent; border: 1px solid var(--neon); color: var(--neon); padding: 0.3rem 0.8rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem; }
   .copy-btn:hover { background: rgba(0,240,255,.1); }
   .note { text-align: center; opacity: 0.6; margin: 2rem 0; font-size: 0.9rem; }
+  a.vault-link { color: var(--neon); text-decoration: none; }
+  a.vault-link:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -28,6 +30,21 @@
 </header>
 <div class="container">
   <div class="category">
+    <h2>SCHEMATIC VAULT BANK</h2>
+    <div class="cmd"><span><strong>Starter Houses</strong> (Grade A) - Cozy homes for claims</span><a class="vault-link" href="https://mcbuild.org/schematics/worldedit/" target="_blank">Open</a></div>
+    <div class="cmd"><span><strong>Castles & Landmarks</strong> (Grade A) - Big builds</span><a class="vault-link" href="https://mcbuild.org/schematics/worldedit/" target="_blank">Open</a></div>
+    <div class="cmd"><span><strong>Massive Free Pack</strong> (Grade A) - Mixed structures</span><a class="vault-link" href="https://www.planetminecraft.com/project/maysschempack-massive-worldpainter-worldedit-free-schematics-pack/" target="_blank">Open</a></div>
+    <div class="cmd"><span>Drop files in <code>plugins/WorldEdit/schematics/</code> then:</span><button class="copy-btn" onclick="copy('//schem load filename')">Copy</button></div>
+    <div class="cmd"><code>//paste</code><button class="copy-btn" onclick="copy('//paste')">Copy</button></div>
+  </div>
+  <div class="category">
+    <h2>AI CHAT FOR MILA (LLMCraft + Ollama)</h2>
+    <div class="cmd"><span>1. Install Ollama on the PC and run:</span><button class="copy-btn" onclick="copy('ollama pull llama3.2:1b')">Copy</button></div>
+    <div class="cmd"><span>2. In LLMCraft config set base URL to:</span><button class="copy-btn" onclick="copy('http://localhost:11434/v1')">Copy</button></div>
+    <div class="cmd"><span>3. Create NPC:</span><button class="copy-btn" onclick="copy('/npc create MeechyGuide')">Copy</button></div>
+    <div class="cmd"><span>4. Attach AI:</span><button class="copy-btn" onclick="copy('/trait llmcraft')">Copy</button></div>
+  </div>
+  <div class="category">
     <h2>POWERS & CHEATS</h2>
     <div class="cmd"><code>/fly</code><button class="copy-btn" onclick="copy('/fly')">Copy</button></div>
     <div class="cmd"><code>/speed 5</code><button class="copy-btn" onclick="copy('/speed 5')">Copy</button></div>
@@ -35,16 +52,6 @@
     <div class="cmd"><code>/heal</code><button class="copy-btn" onclick="copy('/heal')">Copy</button></div>
     <div class="cmd"><code>/gmc</code><button class="copy-btn" onclick="copy('/gmc')">Copy</button></div>
     <div class="cmd"><code>/gms</code><button class="copy-btn" onclick="copy('/gms')">Copy</button></div>
-    <div class="cmd"><code>/effect give BigMeech67 minecraft:invisibility 999999 1</code><button class="copy-btn" onclick="copy('/effect give BigMeech67 minecraft:invisibility 999999 1')">Copy</button></div>
-    <div class="cmd"><code>/effect give BigMeech67 minecraft:strength 999999 2</code><button class="copy-btn" onclick="copy('/effect give BigMeech67 minecraft:strength 999999 2')">Copy</button></div>
-    <div class="cmd"><code>/effect clear BigMeech67</code><button class="copy-btn" onclick="copy('/effect clear BigMeech67')">Copy</button></div>
-  </div>
-  <div class="category">
-    <h2>HOMES & TRAVEL</h2>
-    <div class="cmd"><code>/sethome</code><button class="copy-btn" onclick="copy('/sethome')">Copy</button></div>
-    <div class="cmd"><code>/home</code><button class="copy-btn" onclick="copy('/home')">Copy</button></div>
-    <div class="cmd"><code>/tpa DAD</code><button class="copy-btn" onclick="copy('/tpa DAD')">Copy</button></div>
-    <div class="cmd"><code>/tpaccept</code><button class="copy-btn" onclick="copy('/tpaccept')">Copy</button></div>
   </div>
   <div class="category">
     <h2>BUILDING & SCHEMATICS</h2>
@@ -57,27 +64,12 @@
     <div class="cmd"><code>//paste</code><button class="copy-btn" onclick="copy('//paste')">Copy</button></div>
   </div>
   <div class="category">
-    <h2>TEMPLATE PRE-BUILDS</h2>
-    <div class="cmd"><code>//schem load starter-house</code><button class="copy-btn" onclick="copy('//schem load starter-house')">Copy</button></div>
-    <div class="cmd"><code>//paste</code><button class="copy-btn" onclick="copy('//paste')">Copy</button></div>
-    <div class="cmd"><code>//schem load treehouse</code><button class="copy-btn" onclick="copy('//schem load treehouse')">Copy</button></div>
-    <div class="cmd"><code>//schem load castle</code><button class="copy-btn" onclick="copy('//schem load castle')">Copy</button></div>
-    <div class="cmd"><code>//schem load farm</code><button class="copy-btn" onclick="copy('//schem load farm')">Copy</button></div>
-  </div>
-  <div class="category">
     <h2>CLAIMS & TERRITORIES</h2>
     <div class="cmd"><code>/claim</code><button class="copy-btn" onclick="copy('/claim')">Copy</button></div>
     <div class="cmd"><code>/trust Zoey</code><button class="copy-btn" onclick="copy('/trust Zoey')">Copy</button></div>
     <div class="cmd"><code>/abandonclaim</code><button class="copy-btn" onclick="copy('/abandonclaim')">Copy</button></div>
   </div>
-  <div class="category">
-    <h2>KITS & ITEMS</h2>
-    <div class="cmd"><code>/kit starter</code><button class="copy-btn" onclick="copy('/kit starter')">Copy</button></div>
-    <div class="cmd"><code>/kit builder</code><button class="copy-btn" onclick="copy('/kit builder')">Copy</button></div>
-    <div class="cmd"><code>/repair</code><button class="copy-btn" onclick="copy('/repair')">Copy</button></div>
-    <div class="cmd"><code>/hat</code><button class="copy-btn" onclick="copy('/hat')">Copy</button></div>
-  </div>
-  <div class="note">Copy any command and paste it in the server console or in-game chat (if you have permission).<br>Play Now opens your local Eaglercraft client (works on this PC).</div>
+  <div class="note">Copy any command and paste it in the server console or in-game chat.<br>Play Now opens your local Eaglercraft client (works on this PC).</div>
 </div>
 <script>
 function copy(text) {
